@@ -44,9 +44,9 @@ if (mysqli_num_rows($result) > 0) {
 } else {
     $tbody =  "<tr><td colspan='5'><center>No Data Available </center></td></tr>";
 };
-$filter1 = "SELECT * FROM animals WHERE age<=2";
-$filter2 = "SELECT * FROM animals WHERE age>2 AND age<8";
-$filter3 = "SELECT * FROM animals WHERE age>=8";
+$filter1 = "<=2";
+$filter2 = ">2 AND age<8";
+$filter3 = ">=8";
 
 
 mysqli_close($connect);
@@ -118,7 +118,7 @@ mysqli_close($connect);
             <div class="container-fluid">
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
-                        <a class="nav-link active" aria-current="page" href="#">All</a>
+                        <a class="nav-link active" aria-current="page" href="home.php">All</a>
                         <a class="nav-link" href="filter.php?id=<?php echo $filter1 ?>">Junior Pets</a>
                         <a class="nav-link" href="filter.php?id=<?php echo $filter2 ?>">Middleage Pets</a>
                         <a class="nav-link" href="filter.php?id=<?php echo $filter3 ?>">Senior Pets</a>

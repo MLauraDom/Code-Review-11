@@ -84,6 +84,6 @@ CREATE TABLE `adoption` (
   `a_date` date NOT NULL,
   `fk_user` int NOT NULL,
   `fk_pet` int NOT NULL,
-  FOREIGN KEY (fk_user) REFERENCES user(id) ON DELETE CASCADE
+  FOREIGN KEY (fk_user) REFERENCES user(id) ON DELETE CASCADE,
   FOREIGN KEY (fk_pet) REFERENCES animals(id) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;

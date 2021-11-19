@@ -7,7 +7,7 @@ if (!isset($_SESSION['adm']) && !isset($_SESSION['user'])) {
     exit;
 }
 //if session user exist it shouldn't access dashboard.php
-if (isset($_SESSION["user"])) {
+if (isset($_SESSION["user"]) && !isset($_SESSION['adm'])) {
     header("Location: home.php");
     exit;
 }
@@ -17,6 +17,7 @@ if (isset($_SESSION["user"])) {
 $id = $_SESSION['adm'];
 $res = mysqli_query($connect, "SELECT * FROM user WHERE id=" . $id);
 $row1 = mysqli_fetch_array($res, MYSQLI_ASSOC);
+
 $status = 'adm';
 $sql = "SELECT * FROM user WHERE status != '$status'";
 $result = mysqli_query($connect, $sql);
@@ -139,6 +140,10 @@ mysqli_close($connect);
         </div>
         </div>
         </div>
+        </main>
+    <footer class="p-5 bg-info">
+        <p class="h4 text-center text-white">Made by <a href="#">&#x24B8Laura Moldovan</a></p>
+    </footer>
 </body>
 
 </html>
