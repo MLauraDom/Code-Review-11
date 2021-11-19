@@ -30,16 +30,16 @@ CREATE TABLE `animals` (
 INSERT INTO `animals` VALUES
 (1, 'Kitty', 'Cat', 'large', 'Burggasse 14', 'A beautiful brown female cat who is waiting to take her home.', 'Sleeping, eating, playing', 9, 'bigcat.jpg', true),
 (2, 'Tom', 'Cat', 'small', 'Praterstrasse 23', 'A beautiful striped little male cat who is waiting to take him home.', 'Sleeping, eating, playing', 1, 'lilcat.jpg', false),
-(3, 'Malty', 'Maltese Dog', 'large', 'Neustiftgasse 44', 'A beautiful white little female dog who is waiting to take her home.', 'Sleeping, eating, playing', 1, 'maltese.jpg', true),
+(3, 'Malty', 'Maltese Dog', 'large', 'Neustiftgasse 44', 'A beautiful white little female dog who is waiting to take her home.', 'Sleeping, eating, playing', 4, 'maltese.jpg', true),
 (4, 'Gino', 'French Buldog', 'large', 'Burggasse 14', 'A beautiful brown male french Buldog who is waiting to take him home.', 'Sleeping, eating, playing', 8, 'pug.jpg', true),
 (5, 'Goldie', 'Fightfish', 'small', 'Praterstrasse 23', 'A beautiful orange fightfish who is waiting to take him home.', 'Swimming, eating, fighting', 1, 'fish.jpg', false),
-(6, 'Guy', 'Guineea pig', 'small', 'Neustiftgasse 44', 'A beautiful white/brown little male Guineea Pig who is waiting to take him home.', 'Sleeping, eating, playing', 1, 'guinea-pig.jpg', true),
+(6, 'Guy', 'Guineea pig', 'small', 'Neustiftgasse 44', 'A beautiful white/brown little male Guineea Pig who is waiting to take him home.', 'Sleeping, eating, playing', 3, 'guinea-pig.jpg', true),
 (7, 'Moussie', 'Hamster', 'small', 'Burggasse 14', 'A beautiful brown/white male Hamster who is waiting to take him home.', 'Running, eating, playing', 2, 'hamster.jpg', true),
-(8, 'Stela', 'Horse', 'large', 'Praterstrasse 23', 'A beautiful white female horse who is waiting to take her home.', 'Running, eating, Sleeping', 10, 'horse.jpg', false),
+(8, 'Stela', 'Horse', 'large', 'Praterstrasse 23', 'A beautiful white female horse who is waiting to take her home.', 'Running, eating, Sleeping', 7, 'horse.jpg', false),
 (9, 'Dany', 'Iguana', 'small', 'Neustiftgasse 44', 'A beautiful green female Iguana who is waiting to take her home.', 'Sleeping, eating, playing', 9, 'iguana.jpg', true),
 (10, 'Paully', 'Parrot', 'small', 'Burggasse 14', 'A beautiful colorfull male Parrot who is waiting to take him home.', 'Talking, eating, playing', 2, 'parrot.jpg', true),
 (11, 'Bunny', 'Rabbit', 'small', 'Praterstrasse 23', 'A beautiful female rabbit who is waiting to take her home.', 'Running, eating, sleeping', 10, 'rabbit.jpg', true),
-(12, 'Spidey', 'Tarantula', 'small', 'Neustiftgasse 44', 'A beautiful female Tarantula who is waiting to take her home.', 'Sleeping, eating, playing', 9, 'tarantula.jpg', false);
+(12, 'Spidey', 'Tarantula', 'small', 'Neustiftgasse 44', 'A beautiful female Tarantula who is waiting to take her home.', 'Sleeping, eating, playing', 5, 'tarantula.jpg', false);
 
 -- --------------------------------------------------------
 

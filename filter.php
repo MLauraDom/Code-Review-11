@@ -18,7 +18,7 @@ if (!isset($_SESSION['adm']) && isset($_SESSION['user'])) {
     $row1 = mysqli_fetch_array($res, MYSQLI_ASSOC);
 }
 
-$sql = "SELECT * FROM animals";
+$sql = $_GET['id'];
 $result = mysqli_query($connect, $sql);
 $tbody = '';
 if (mysqli_num_rows($result) > 0) {
@@ -44,6 +44,7 @@ if (mysqli_num_rows($result) > 0) {
 } else {
     $tbody =  "<tr><td colspan='5'><center>No Data Available </center></td></tr>";
 };
+
 $filter1 = "SELECT * FROM animals WHERE age<=2";
 $filter2 = "SELECT * FROM animals WHERE age>2 AND age<8";
 $filter3 = "SELECT * FROM animals WHERE age>=8";
