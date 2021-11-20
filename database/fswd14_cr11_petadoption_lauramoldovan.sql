@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 20, 2021 at 04:17 AM
+-- Generation Time: Nov 20, 2021 at 12:43 PM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 8.0.12
 
@@ -36,6 +36,14 @@ CREATE TABLE `adoption` (
   `fk_pet` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `adoption`
+--
+
+INSERT INTO `adoption` (`id`, `a_date`, `fk_user`, `fk_pet`) VALUES
+(3, '2021-11-20', 13, 4),
+(4, '2021-11-20', 13, 12);
+
 -- --------------------------------------------------------
 
 --
@@ -60,14 +68,14 @@ CREATE TABLE `animals` (
 --
 
 INSERT INTO `animals` (`id`, `name`, `breed`, `size`, `location`, `description`, `hobby`, `age`, `picture`, `status`) VALUES
-(1, 'Kitty', 'Cat', 'large', 'Burggasse 14', 'A beautiful brown female cat who is waiting to take her home.', 'Sleeping, eating, playing', 9, 'bigcat.jpg', 0),
-(2, 'Tom', 'Cat', 'small', 'Praterstrasse 23', 'A beautiful striped little male cat who is waiting to take him home.', 'Sleeping, eating, playing', 1, 'lilcat.jpg', 0),
+(1, 'Kitty', 'Cat', 'large', 'Burggasse 14', 'A beautiful brown female cat who is waiting to take her home.', 'Sleeping, eating, playing', 9, 'bigcat.jpg', 1),
+(2, 'Tom', 'Cat', 'small', 'Praterstrasse 23', 'A beautiful striped little male cat who is waiting to take him home.', 'Sleeping, eating, playing', 1, 'lilcat.jpg', 1),
 (3, 'Malty', 'Maltese Dog', 'large', 'Neustiftgasse 44', 'A beautiful white little female dog who is waiting to take her home.', 'Sleeping, eating, playing', 4, 'maltese.jpg', 1),
-(4, 'Gino', 'French Buldog', 'large', 'Burggasse 14', 'A beautiful brown male french Buldog who is waiting to take him home.', 'Sleeping, eating, playing', 8, 'pug.jpg', 1),
-(5, 'Goldie', 'Fightfish', 'small', 'Praterstrasse 23', 'A beautiful orange fightfish who is waiting to take him home.', 'Swimming, eating, fighting', 1, 'fish.jpg', 0),
-(6, 'Guy', 'Guineea pig', 'small', 'Neustiftgasse 44', 'A beautiful white/brown little male Guineea Pig who is waiting to take him home.', 'Sleeping, eating, playing', 3, 'guinea-pig.jpg', 0),
+(4, 'Gino', 'French Buldog', 'large', 'Burggasse 14', 'A beautiful brown male french Buldog who is waiting to take him home.', 'Sleeping, eating, playing', 8, 'pug.jpg', 0),
+(5, 'Goldie', 'Fightfish', 'small', 'Praterstrasse 23', 'A beautiful orange fightfish who is waiting to take him home.', 'Swimming, eating, fighting', 1, 'fish.jpg', 1),
+(6, 'Guy', 'Guineea pig', 'small', 'Neustiftgasse 44', 'A beautiful white/brown little male Guineea Pig who is waiting to take him home.', 'Sleeping, eating, playing', 3, 'guinea-pig.jpg', 1),
 (7, 'Moussie', 'Hamster', 'small', 'Burggasse 14', 'A beautiful brown/white male Hamster who is waiting to take him home.', 'Running, eating, playing', 2, 'hamster.jpg', 1),
-(8, 'Stela', 'Horse', 'large', 'Praterstrasse 23', 'A beautiful white female horse who is waiting to take her home.', 'Running, eating, Sleeping', 7, 'horse.jpg', 0),
+(8, 'Stela', 'Horse', 'large', 'Praterstrasse 23', 'A beautiful white female horse who is waiting to take her home.', 'Running, eating, Sleeping', 7, 'horse.jpg', 1),
 (9, 'Dany', 'Iguana', 'small', 'Neustiftgasse 44', 'A beautiful green female Iguana who is waiting to take her home.', 'Sleeping, eating, playing', 9, 'iguana.jpg', 1),
 (10, 'Paully', 'Parrot', 'small', 'Burggasse 14', 'A beautiful colorfull male Parrot who is waiting to take him home.', 'Talking, eating, playing', 2, 'parrot.jpg', 1),
 (11, 'Bunny', 'Rabbit', 'small', 'Praterstrasse 23', 'A beautiful female rabbit who is waiting to take her home.', 'Running, eating, sleeping', 10, 'rabbit.jpg', 1),
@@ -108,7 +116,7 @@ INSERT INTO `user` (`id`, `fname`, `lname`, `password`, `email`, `address`, `pho
 (10, 'Stana', 'Izbasa', 'SteauaR', 's.izbasa@gmail.com', 'Romania, Timisoara, 23980, Brancoveanu, 42/5/7', '+40 721 85 66 95', 'stana.jpg', 'user'),
 (11, 'Dragana', 'Mirkovic', 'DragaM', 'dm@gmail.com', 'Austria, Vienna, 1100 Brunnweg, 4/10/8', '+43 660 85 39 704', 'dragam.jpg', 'user'),
 (12, 'William', 'Shakespeare', 'WillyBoy', 'shakespeare@gmail.com', 'Germany, Berlin, 8990, Burggasse, 22/3', '+49 443 89 59 994', 'willy.jpg', 'user'),
-(13, 'Gheorghe', 'Zamfir', '16fe1a32824818d30fa36e08e5aec435b1144dcee4670cdfced41ba7cdcf4c1b', 'gheorghe@gmail.com', 'Racasdia 341', '+40 721 85 66 95', '61985d52667c3.jpg', 'user');
+(13, 'gheorghe', 'zamfir', '16fe1a32824818d30fa36e08e5aec435b1144dcee4670cdfced41ba7cdcf4c1b', 'gheorghe@gmail.com', 'gfds', 'fd', '6198db12dd636.jpg', 'adm');
 
 --
 -- Indexes for dumped tables
@@ -142,13 +150,13 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `adoption`
 --
 ALTER TABLE `adoption`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `animals`
 --
 ALTER TABLE `animals`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `user`

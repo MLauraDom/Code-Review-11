@@ -115,10 +115,10 @@ $sql2 = "SELECT * FROM adoption
         </ul>
         <div class="hero p-5">
             <h3>
-                Congratulations, <?php echo $row2['fname'] . " " . $row2['lname'] ?>!
+                Thank you, <?php echo $row2['fname'] . " " . $row2['lname'] ?>, for adopting
             </h3>
             <h1 class="text-center">
-                Adoption succesfull!
+            <?php echo $row2['name'] . " - " . $row2['breed'] ?>
             </h1>
         </div>
     </header>

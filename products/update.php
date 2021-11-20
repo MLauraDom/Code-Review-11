@@ -140,7 +140,7 @@ if ($_GET['id']) {
                 </tr>
                 <tr>
                     <th>Age</th>
-                    <td><input class='form-control' type="number" name="age" value="<?php echo $age ?>" /></td>
+                    <td><input class='form-control' type="number" name="age" value=<?php echo $age ?> /></td>
                 </tr>
                 <tr>
                     <th>Picture</th>
@@ -150,20 +150,20 @@ if ($_GET['id']) {
                     <th>Available in Petshop</th>
                     <td>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="status" id="flexRadioDefault1" value="<?php echo $status ?>" checked>
+                            <input class="form-check-input" type="radio" name="status" id="flexRadioDefault1" value=<?php echo $status ?> checked>
                             <label class="form-check-label" for="flexRadioDefault1">
                                 <?php
-                                if ($status = 1)
+                                if ($status == 1)
                                     echo "YES";
                                 else
                                     echo "NO"; ?>
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="status" id="flexRadioDefault2" value="<?php echo !$status ?>">
+                            <input class="form-check-input" type="radio" name="status" id="flexRadioDefault2" value=<?php echo abs($status-1) ?>>
                             <label class="form-check-label" for="flexRadioDefault2">
                                 <?php
-                                if ($status = 1)
+                                if ($status == 1)
                                     echo "NO";
                                 else
                                     echo "YES"; ?>
