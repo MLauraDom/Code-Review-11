@@ -132,9 +132,9 @@ if ($_GET['id']) {
                     <div class='card-footer text-center'>
                         
                        <?php if ($status == 1)
-                            echo "<p class='btn btn-small bg-success' href='adopt.php'>Take me Home</p>";
+                            echo "<a class='btn btn-small bg-success' href='adopt.php?id=".$id."'>Take me Home</a>";
                         else if ($status == 0)
-                            echo "<p class='btn btn-small bg-danger' href='adopted.php'>Already Adopted</p>"
+                            echo "<a class='btn btn-small bg-danger'>Already Adopted</a>"
                         ?>
                             </div>
                         </div>
