@@ -30,7 +30,7 @@ if (mysqli_num_rows($result) > 0) {
                 <h4 class='card-header text-center'>" . $row['name'] . "</h4>
                 <div class='card-body p-2'>
                     <p class='h5 card-text text-center'>" . $row['breed'] . "</p>
-                    <p class='card-text'>Written by " . $row['description'] . "</p>
+                    <p class='card-text'>" . $row['description'] . "</p>
                     <p class='h6'>
                     Age: " . $row['age'] . " years old.
                     </p>
